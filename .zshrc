@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/chriseisenbraun/.oh-my-zsh
+export ZSH=/Users/chris/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -66,16 +66,21 @@ ZSH_THEME="robbyrussell" # ->
 # Node Npm version
 # plugins=(git extract osx brew bower node npm)
 
-
+# [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 # Learm more https://github.com/lukechilds/zsh-nvm
-# NVM version
-# plugins=(zsh-nvm git extract osx brew)
-plugins=(zsh-better-npm-completion git extract osx brew)
+
+#plugins=(zsh-nvm git extract osx brew)
+plugins=(zsh-nvm z git extract osx brew node npm)
+plugins+=(zsh-better-npm-completion)
+
+# zsh-nvm plugin https://github.com/lukechilds/zsh-nvm
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/chriseisenbraun/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/opt/ImageMagick/bin:/usr/local/bin"
+# export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/chris/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/opt/ImageMagick/bin:/usr/local/bin"
 # export MAGICK_HOME="$HOME/bin/ImageMagick-7.0.5"
 # export PATH="$MAGICK_HOME/bin:$PATH"
 
@@ -84,10 +89,8 @@ export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/chriseisenbrau
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
-
 # Include Z for fast directory switching
-. ~/bin/z.sh
+# . ~/z.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -112,25 +115,40 @@ source $ZSH/oh-my-zsh.sh
 
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="subl ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
 # redefine prompt_context for hiding user@hostname
 
 # This will get my ip address
 alias myip="ipconfig getifaddr 'en0'"
 
-# For Shopify http://themekit.cat/install/
+# For trash-cli
+# https://github.com/sindresorhus/trash-cli
+rm=trash
 
-export PATH=$PATH:~/Applications/bin
+# For Shopify http://themekit.cat/install/
+# export PATH=$PATH:~/Applications/bin
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# source ~/.iterm2_shell_integration.`basename $SHELL`
+
 # FOR RVM
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 
 # Yarn
-export PATH="$PATH:$HOME/.yarn/bin"
+# export PATH="$PATH:$HOME/.yarn/bin"
 
-export NVM_DIR="/Users/chriseisenbraun/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# export NVM_DIR="/Users/chris/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Set NVM_DIR if it isn't already defined
+#[[ -z "$NVM_DIR" ]] && export NVM_DIR="$HOME/.nvm"
+
+# Load nvm if it exists
+#[[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+
+#### NODE AND NVM NOTES
+
+# https://github.com/creationix/nvm#installation

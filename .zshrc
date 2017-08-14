@@ -7,6 +7,7 @@ export ZSH=/Users/chris/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell" # ->
 # ZSH_THEME="agnoster" # Christain's theme
+
 # ZSH_THEME="obraun" # way to much info
 # ZSH_THEME="amuse" # Watch
 # ZSH_THEME="muse" # |>
@@ -38,7 +39,7 @@ ZSH_THEME="robbyrussell" # ->
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -61,20 +62,13 @@ ZSH_THEME="robbyrussell" # ->
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-# NVM issue with linters http://stackoverflow.com/questions/32069548/nvm-cannot-load-default-node-with-default-alias-set
 
-# Node Npm version
-# plugins=(git extract osx brew bower node npm)
+# DONT use zsh-nvm here - NVM issue with linters
+# Learn more https://github.com/lukechilds/zsh-nvm
+# Learn more http://stackoverflow.com/questions/32069548/nvm-cannot-load-default-node-with-default-alias-set
 
-# [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
-
-# Learm more https://github.com/lukechilds/zsh-nvm
-
-#plugins=(zsh-nvm git extract osx brew)
-plugins=(zsh-nvm z git extract osx brew node npm)
-plugins+=(zsh-better-npm-completion)
-
-# zsh-nvm plugin https://github.com/lukechilds/zsh-nvm
+# plugins=(zsh-nvm git extract osx brew)
+plugins=(z git sublime extract osx brew node zsh-better-npm-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,9 +82,6 @@ source $ZSH/oh-my-zsh.sh
 # export DISPLAY=:0
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# Include Z for fast directory switching
-# . ~/z.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -124,7 +115,10 @@ alias myip="ipconfig getifaddr 'en0'"
 
 # For trash-cli
 # https://github.com/sindresorhus/trash-cli
-rm=trash
+alias rm="trash"
+
+# Sublime set as default in .gitconfig
+# alias st="subl"
 
 # For Shopify http://themekit.cat/install/
 # export PATH=$PATH:~/Applications/bin
@@ -136,19 +130,27 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # FOR RVM
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-
 # Yarn
 # export PATH="$PATH:$HOME/.yarn/bin"
 
-# export NVM_DIR="/Users/chris/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# Set NVM_DIR if it isn't already defined
-#[[ -z "$NVM_DIR" ]] && export NVM_DIR="$HOME/.nvm"
-
-# Load nvm if it exists
-#[[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 
 #### NODE AND NVM NOTES
 
-# https://github.com/creationix/nvm#installation
+# Using this: https://github.com/creationix/nvm#installation
+# Learn more: https://github.com/SublimeLinter/SublimeLinter-jshint/issues/10
+
+# LOAD NVM IN ~/.ZSHENV
+
+# EITHER THIS
+# [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh ## USING THIS
+
+# OR THIS - But not both
+# export NVM_DIR="/Users/chris/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+####### END NVM .ZSHENV #####
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+DEFAULT_USER="chris"

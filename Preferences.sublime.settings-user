@@ -1,0 +1,77 @@
+{
+  "auto_complete_selector": "source, text",
+  "color_scheme": "Packages/Boxy Theme/schemes/Boxy Solarized Light.tmTheme",
+  "detect_indentation": true,
+  "detect_slow_plugins": true,
+  "draw_white_space": "all",
+  "ensure_newline_at_eof_on_save": true,
+  "fade_fold_buttons": false,
+  "file_exclude_patterns":
+  [
+    "*.pyc",
+    ".git",
+    ".DS*"
+  ],
+  "folder_exclude_patterns":
+  [
+    ".sass-cache",
+    ".git"
+  ],
+  "font_face": "Menlo",
+  "font_options":
+  [
+    "gray_antialias",
+    "subpixel_antialias",
+    "no_bold"
+  ],
+  "font_size": 19,
+  "highlight_line": true,
+  "hot_exit": false,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "indent_guide_options":
+  [
+    "draw_normal",
+    "draw_active"
+  ],
+  "line_padding_bottom": 2,
+  "line_padding_top": 2,
+  "match_brackets": true,
+  "match_brackets_angle": true,
+  "match_brackets_braces": true,
+  "match_brackets_content": true,
+  "match_brackets_square": true,
+  "match_tags": true,
+  "open_files_in_new_window": false,
+  "remember_open_files": false,
+  "save_on_focus_lost": false,
+  "scroll_past_end": true,
+  "show_tab_close_buttons": true,
+  "tab_size": 2,
+  "theme": "Boxy Tomorrow.sublime-theme",
+  "theme_accent_mono": true,
+  "theme_bar": true,
+  "theme_bar_logo_materialized": true,
+  "theme_bar_shadow_hidden": true,
+  "theme_panel_switcher_materialized": true,
+  "theme_quick_panel_border_visible": true,
+  "theme_quick_panel_item_selected_colored": true,
+  "theme_scrollbar_semi_overlayed": true,
+  "theme_sidebar_border": true,
+  "theme_sidebar_folder_arrow": true,
+  "theme_sidebar_folder_mono": true,
+  "theme_sidebar_font_md": true,
+  "theme_sidebar_indent_sm": true,
+  "theme_statusbar_colored": true,
+  "theme_tab_selected_label_bold": true,
+  "theme_tab_selected_overlined": true,
+  "theme_tab_size_xs": true,
+  "theme_tooltips_font_md": true,
+  "trailing_spaces_include_current_line": false,
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "word_separators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?",
+  "word_wrap": true
+}

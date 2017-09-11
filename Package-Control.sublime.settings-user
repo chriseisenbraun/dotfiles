@@ -43,6 +43,7 @@
     "SublimeLinter-contrib-eslint",
     "SublimeLinter-contrib-htmlhint",
     "SublimeLinter-contrib-lessc",
+    "SublimeLinter-contrib-lesshint",
     "SublimeLinter-csslint",
     "Syntax Highlighting for Sass",
     "View In Browser",

@@ -68,7 +68,7 @@ ENABLE_CORRECTION="true"
 # Learn more http://stackoverflow.com/questions/32069548/nvm-cannot-load-default-node-with-default-alias-set
 
 # plugins=(zsh-nvm git extract osx brew)
-plugins=(z git sublime extract osx brew node zsh-better-npm-completion)
+plugins=(z git extract osx brew zsh-better-npm-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,8 +106,8 @@ source $ZSH/oh-my-zsh.sh
 
 #
 # Example aliases
-alias zshconfig="subl ~/.zshrc"
-alias ohmyzsh="subl ~/.oh-my-zsh"
+alias zshconfig="code ~/.zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
 # redefine prompt_context for hiding user@hostname
 
 # This will get my ip address

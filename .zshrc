@@ -7,7 +7,7 @@ export ZSH=/Users/chris/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell" # ->
 # ZSH_THEME="agnoster" # Christain's theme
-
+# ZSH_THEME="mortalscumbag"
 # ZSH_THEME="obraun" # way to much info
 # ZSH_THEME="amuse" # Watch
 # ZSH_THEME="muse" # |>
@@ -30,7 +30,7 @@ ZSH_THEME="robbyrussell" # ->
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=12
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -40,6 +40,9 @@ ZSH_THEME="robbyrussell" # ->
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
+
+# Ignore git st alias for status
+CORRECT_IGNORE='st'
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -68,7 +71,7 @@ ENABLE_CORRECTION="true"
 # Learn more http://stackoverflow.com/questions/32069548/nvm-cannot-load-default-node-with-default-alias-set
 
 # plugins=(zsh-nvm git extract osx brew)
-plugins=(z git extract osx brew zsh-better-npm-completion)
+plugins=(z git extract osx brew zsh-better-npm-completion zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,8 +123,12 @@ alias rm="trash"
 # Sublime set as default in .gitconfig
 # alias st="subl"
 
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
+
 # For Shopify http://themekit.cat/install/
 # export PATH=$PATH:~/Applications/bin
+
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -154,3 +161,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 DEFAULT_USER="chris"
+
+#### POSTGRES ####
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.6/bin
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="--extended"
